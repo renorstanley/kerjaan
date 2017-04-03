@@ -14,15 +14,15 @@ login to invest
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form role="form" method="POST" action="{{url('/register')}}" id="contactForm" novalidate>
+                    <form role="form" method="POST" action="{{url('/password/email')}}" novalidate>
                         {{ csrf_field() }}
                         <div class="row">
                           
                                 <div class="form-group{{ $errors->has('name') ? ' has-error' : '' }}">
-                                    <input type="text" class="form-control" placeholder="Email Address *" name="name" id="name" value="{{old('name')}}">
-                                    @if ($errors->has('name'))
+                                    <input type="email" class="form-control" placeholder="Email Address *" name="email" id="name" value="{{old('email')}}">
+                                    @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('name') }}</strong>
+                                        <strong>{{ $errors->first('email') }}</strong>
                                     </span>
                                     @endif
                                 </div>

@@ -67,12 +67,18 @@
                     <li>
                         <a class="page-scroll" href="">How It Works</a>
                     </li>
+                    @if(Auth::check())
+                    <li>
+                        <a class="page-scroll" href={{url('logout')}}>welcome {{auth::user()->name}}, <font color="#fed136">logout</font></a>
+                    </li> 
+                    @else
                     <li>
                         <a class="page-scroll" href="{{url('login')}}"><font color="#fed136">login</font></a>
                     </li>
                     <li>
                         <a class="page-scroll" href="{{url('register')}}"><font color="#fed136">register</font></a>
                     </li>
+                    @endif
                     <li>
                         <a class="page-scroll" href="#contact">contact us</a>
                     </li>

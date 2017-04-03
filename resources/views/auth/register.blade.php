@@ -1,17 +1,19 @@
 @extends('layouts.app')
-
+@section('title')
+register to invest
+@endsection
 @section('content')
  <section id="contact" style="background-color:#daa250">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Register</h2>
-                    <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+                    <h3 class="section-subheading text-muted">fill your information here</h3>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-12">
-                    <form role="form" method="POST" action="{{url('/register')}}" id="contactForm" novalidate>
+                    <form role="form" method="POST" action="{{url('/register')}}" novalidate>
                         {{ csrf_field() }}
                         <div class="row">
                             <div class="col-md-6">
@@ -35,14 +37,13 @@
                             </div>
                             <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                                    <input type="email" class="form-control" placeholder="Your Email *" id="email" value="{{old('email')}}">
+                                    <input type="email" class="form-control" name="email" placeholder="Your Email *" id="email" value="{{old('email')}}">
                                     @if ($errors->has('email'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
-                                    </span>
+                                     </span>
                                     @endif
                                 </div>
-                                <div class="form-group{{ $errors->has('confirmpassword') ? ' has-error' : '' }}">
+                                <div class="form-group{{ $errors->has('password_confirmation') ? ' has-error' : '' }}">
                                     <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm your password *">
                                     @if ($errors->has('password_confirmation'))
                                     <span class="help-block">
