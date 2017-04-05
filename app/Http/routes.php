@@ -20,3 +20,6 @@ Route::auth();
 Route::get('/home', function(){
 	return view('auth.emails.password');
 });
+
+//get funded 
+Route::get('/registerclient', 'getFundedController@showform');

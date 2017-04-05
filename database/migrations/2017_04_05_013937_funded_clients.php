@@ -16,7 +16,6 @@ class FundedClients extends Migration
             $table->increments('id');
             $table->integer('user_id')->unsigned();
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('no')->unsigned();
             $table->string('full_name');
             $table->string('mobile_number');
             $table->string('company');
@@ -29,6 +28,7 @@ class FundedClients extends Migration
             $table->string('year_established');
             $table->string('est_annual_revenue');
             $table->string('assets_to_be_purchased');
+            $table->integer('funding_period');
             $table->string('financial_report');
             $table->timestamps();
         });
