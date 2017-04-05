@@ -56,6 +56,14 @@
                         <a class="page-scroll" href={{url('/')}}>Home</a>
                     </li>
                     @if(Auth::check() && Auth::user()->name=="administrator")
+                    <li>
+                        <a class="page-scroll" href="#about"> static Information</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href="#about">Campaigns</a>
+                    </li>
+                    <li>
+                        <a class="page-scroll" href=""> Clients</a>
                     @else
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -64,7 +72,7 @@
                         <a class="page-scroll" href={{url('campaigns')}}>Campaigns</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="">Get Funded</a>
+                        <a class="page-scroll" href="{{url('registerclient')}}">Get Funded</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="">How It Works</a>
@@ -82,11 +90,11 @@
                         <a class="page-scroll" href="{{url('register')}}"><font color="#fed136">register</font></a>
                     </li>
                     @endif
-                    @if(Auth::user()->name!="administrator")
+                  
                     <li>
                         <a class="page-scroll" href="#contact">contact us</a>
                     </li>
-                    @endif
+                  
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
