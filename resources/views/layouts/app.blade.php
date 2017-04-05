@@ -55,6 +55,8 @@
                     <li>
                         <a class="page-scroll" href={{url('/')}}>Home</a>
                     </li>
+                    @if(Auth::check() && Auth::user()->name=="administrator")
+                    @else
                     <li>
                         <a class="page-scroll" href="#about">About</a>
                     </li>
@@ -67,6 +69,7 @@
                     <li>
                         <a class="page-scroll" href="">How It Works</a>
                     </li>
+                    @endif
                     @if(Auth::check())
                     <li>
                         <a class="page-scroll" href={{url('logout')}}>welcome {{auth::user()->name}}, <font color="#fed136">logout</font></a>
@@ -79,9 +82,11 @@
                         <a class="page-scroll" href="{{url('register')}}"><font color="#fed136">register</font></a>
                     </li>
                     @endif
+                    @if(Auth::user()->name!="administrator")
                     <li>
                         <a class="page-scroll" href="#contact">contact us</a>
                     </li>
+                    @endif
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -91,7 +96,10 @@
 
     <!-- Header -->
     <header>
-        <div class="container">
+        <div class="w3-content w3-display-container">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
             <div class="intro-text">
                 <div class="intro-lead-in">Welcome To Our Studio!</div>
                 <div class="intro-heading">It's Nice To Meet You</div>
