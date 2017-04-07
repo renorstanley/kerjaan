@@ -23,4 +23,8 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+     public function clients()
+    {
+        return $this->hasOne('App\funded_clients');
+    }
 }

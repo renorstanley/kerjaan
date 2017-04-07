@@ -22,4 +22,5 @@ Route::get('/home', function(){
 });
 
 //get funded 
-Route::get('/registerclient', 'getFundedController@showform');
+
+Route::resource('client', 'getFundedController');

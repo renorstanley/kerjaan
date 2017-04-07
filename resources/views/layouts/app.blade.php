@@ -63,7 +63,7 @@
                         <a class="page-scroll" href="#about">Campaigns</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href=""> Clients</a>
+                        <a class="page-scroll" href="{{url('client')}}"> Clients</a>
                     @else
                     <li>
                         <a class="page-scroll" href="#about">About</a>
@@ -72,7 +72,7 @@
                         <a class="page-scroll" href={{url('campaigns')}}>Campaigns</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="{{url('registerclient')}}">Get Funded</a>
+                        <a class="page-scroll" href="{{url('client/create')}}">Get Funded</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="">How It Works</a>
