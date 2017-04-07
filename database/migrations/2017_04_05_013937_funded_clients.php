@@ -31,6 +31,7 @@ class FundedClients extends Migration
             $table->integer('funding_period');
             $table->string('financial_report');
             $table->timestamps();
+             $table->primary('id');
         });
     }
 
