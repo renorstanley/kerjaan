@@ -20,6 +20,15 @@ register to invest
             </div>
         </div> 
        <div style="overflow-x:auto">
+        @if($clients->count()==0)
+
+    <div class="row">
+              <div class="col-lg-12 text-center">
+                <h2 class="section-heading">Sorry!</h2>
+                <h3 class="section-subheading text-muted">you still have no clients</h3>
+            </div>
+        </div>    
+        @else    
               <table class="table table-hover">
     <thead>
       <tr>
@@ -63,8 +72,9 @@ register to invest
       @endforeach
     </tbody>
   </table>
+ 
 </div>
-          
+          @endif
         @endif
     </div>
 </section>
