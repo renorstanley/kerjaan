@@ -146,11 +146,15 @@ fieldset[disabled] .btn-xl.active {
   color: #fed136;
   background-color: white;
 }
-.navbar-custom {
+.navbar-custom .navbar-default {
   background-color: #222222;
   border-color: transparent;
 }
 .navbar-custom .navbar-brand {
+  color: #fed136;
+  font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
+}
+.navbar-default {
   color: #fed136;
   font-family: "Kaushan Script", "Helvetica Neue", Helvetica, Arial, cursive;
 }
