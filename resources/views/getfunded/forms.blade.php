@@ -72,6 +72,7 @@ register to invest
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-6">
+                                <div class="row">
                             <div class="form-group{{ $errors->has('country') ? ' has-error' : '' }}" >
                                 <select class="form-control" name="country">
                                     <option value="" selected>Select your country *</option>
@@ -320,9 +321,11 @@ register to invest
                                     {{ $errors->first('country') }}
                                 </span>
                                 @endif
-                            </div>      
+                            </div> 
+                            </div>     
                         </div>
                          <div class="col-md-6">
+                            <div class="row">
                             <div class="form-group{{ $errors->has('currency') ? ' has-error' : '' }}" >
                                 <select class="form-control" name="currency">
                                     <option value="" selected> select your will-applied currency * </option>
@@ -338,12 +341,14 @@ register to invest
                                 @endif
                             </div>      
                         </div>
+                        </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-lg-12">
+
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('company') ? ' has-error' : '' }}">
+                               
                                 <input type="text" class="form-control" name="company" placeholder="Your Company *" id="mobile_number" value="{{old('company')}}">
                                 @if ($errors->has('company'))
                                 <span class="help-block">
@@ -354,7 +359,7 @@ register to invest
                         </div>
                         <div class="col-md-6">
                             <div class="col-md-6">
-
+                                <div class="row">
                                 <div class="form-group{{ $errors->has('industry') ? ' has-error' : '' }}">
                                     <input type="text" class="form-control" name="industry" placeholder="Your industry *" id="mobile_number" value="{{old('industry')}}">
                                     @if ($errors->has('industry'))
@@ -364,8 +369,10 @@ register to invest
                                     @endif
                                 </div>
                             </div>
+                            </div>
                             <div class="col-md-6">
-
+                                <div class="row">
+                                
                                 <div class="form-group{{ $errors->has('year_established') ? ' has-error' : '' }}">
                                     <input type="text" class="form-control" name="year_established" placeholder="Year Established *" id="mobile_number" value="{{old('year_established')}}">
                                     @if ($errors->has('year_established'))
@@ -374,7 +381,8 @@ register to invest
                                     </span>
                                     @endif
                                 </div>
-                            </div>            
+                            </div> 
+                            </div>           
                         </div>
                         <div class="col-md-6">
                             <div class="form-group{{ $errors->has('funding_amount_req') ? ' has-error' : '' }}">
@@ -396,8 +404,9 @@ register to invest
                                 @endif
                             </div>      
                         </div>
-                        <div class="row">
+                     
                             <div class="col-md-6">
+                               <div class="col-md-6">
                                 <div class="row">
                                 <div class="form-group{{ $errors->has('funding_period') ? ' has-error' : '' }}">
                                     <select class="form-control" name="funding_period" id="mobile_number">
@@ -422,6 +431,8 @@ register to invest
                                     @endif
                                 </div>
                                 </div>
+                            </div>
+                            <div class="col-md-6">
                                 <div class="row">
                                     <div class="form-group{{ $errors->has('purchases_order') ? ' has-error' : '' }}">
                                     <select class="form-control" name="purchases_order">
@@ -435,6 +446,7 @@ register to invest
                                 </div>     
                                 </div>      
                             </div>
+                        </div>
                             <div class="col-md-6">
                                 <div class="form-group{{ $errors->has('est_annual_revenue') ? ' has-error' : '' }}">
                                     <input type="text" class="form-control" name="est_annual_revenue" placeholder="est_annual_revenue *" id="mobile_number" value="{{old('est_annual_revenue')}}">
@@ -448,7 +460,7 @@ register to invest
                           
                         </div>
                         <div class="row">
-                         
+                            <div class="col-lg-12">
                                  
                             <div class="form-group{{ $errors->has('financial_report') ? ' has-error' : '' }}">
                                 <label class="form-label">attach your financial report here,(maximum file size will be 250 mb). don't worry, any of your privacy will be safe with us</label>
@@ -460,6 +472,7 @@ register to invest
                                     @endif
                             </div> 
                             </div>
+                        </div>
 
                     <div class="clearfix"></div>
                     <div class="col-lg-12 text-center">
